@@ -3,6 +3,21 @@ Conversion of BGI-sequenced headers of FASTQ records to Illumina-compatible ones
 
 ## Installation
 
+Simply run make:
+```bash
+make          // this will build a binary
+make install  // this will copy binary into /usr/local/bin
+```
+To delete existing "installation" run 
+```bash
+make uninstall
+```
+
+## Installation 
+
+Compilation process is very simple and can be handled without `make`,
+if you are more comfortable with it for some reasons.
+
 Compile the source code with `gcc`:
 
 ```bash
