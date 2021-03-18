@@ -36,6 +36,30 @@ clang -o bgi2illumina bgi2illumina.c
 ```
 The support for gz-compressed files is provided through piping through `bgzip -c` and `bgzip -cd` (or `gunzip -c`).
 
+## BGI headers
+
+BGI headers example:
+```
+@v300056266_run28L3C001R0010057888/1
+@v300056266_run28L3C001R0010058124/1
+@v300056266_run28L3C001R0010058591/1
+```
+
+It has the following structure:
+```
+{PREFIX}L{LANE}C{COLUMN}R{ROW}{TILE}/{READ}
+```
+
+In the example below:
+```
+PREFIX                  LANE   COLUMN   ROW  TILE      READ
+@v300056266_run28     L 3    C 001    R 001  0057888 / 1
+@v300056266_run28     L 3    C 001    R 001  0058124 / 1
+@v300056266_run28     L 3    C 001    R 001  0058591 / 1
+```
+
+
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
